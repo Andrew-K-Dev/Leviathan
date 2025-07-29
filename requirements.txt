@@ -1,0 +1,12 @@
+requests
+beautifulsoup4
+lxml
+pandas
+fpdf
+openai
+python-dotenv
+schedule
+pyTelegramBotAPI
+flask
+aiohttp
+gunicorn
