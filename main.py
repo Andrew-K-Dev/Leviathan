@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 import threading
 import schedule
 import time
@@ -12,6 +12,21 @@ load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 app = Flask(__name__)
+
+
+# Your existing routes...
+
+@app.route('/api/leads', methods=['GET'])
+def get_leads():
+    # Example response, replace with your real lead data or logic
+    leads = [
+        {"id": 1, "name": "Lead One", "email": "leadone@example.com"},
+        {"id": 2, "name": "Lead Two", "email": "leadtwo@example.com"},
+    ]
+    return jsonify(leads)
+
+# Rest of your app...
+
 
 @app.route("/")
 def home():
