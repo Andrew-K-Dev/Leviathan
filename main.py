@@ -20,10 +20,19 @@ def home():
 @app.route('/api/leads', methods=['GET'])
 def get_leads():
     leads = [
-        {"id": 1, "name": "Lead One", "email": "leadone@example.com"},
-        {"id": 2, "name": "Lead Two", "email": "leadtwo@example.com"}
+        {
+            "email": "leadone@example.com",
+            "product": "Dewalt Drill",
+            "timestamp": "2025-07-29 22:35"
+        },
+        {
+            "email": "leadtwo@example.com",
+            "product": "Milwaukee Saw",
+            "timestamp": "2025-07-29 22:36"
+        }
     ]
     return jsonify(leads)
+
 
 # === Arbitrage Scanner Logic ===
 
